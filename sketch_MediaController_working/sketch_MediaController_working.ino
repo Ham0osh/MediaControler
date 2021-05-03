@@ -18,15 +18,19 @@ SimpleRotary rotary(2,3,4);
 #define CONSUMER_CALCULATOR 0x192
 #define CONSUMER_EXPLORER 0x194
 
+const int debounceDelay = 10;
+const int errorDelay = 2;
+
 void setup() {
   // put your setup code here, to run once:
-  rotary.setDebounceDelay(15);
-  rotary.setErrorDelay(5);
+  rotary.setDebounceDelay(debounceDelay);
+  rotary.setErrorDelay(errorDelay);
+  Serial.println("Version 1.01 - May 2, 2020");
 }
 
 void loop() {
   byte i = rotary.rotate();
-  byte t = rotary.pushType(50);
+  byte t = rotary.pushType(20);
   
   // CW
   if ( i == 1 ) {
@@ -48,6 +52,4 @@ void loop() {
     Serial.println("Long Push");
     Consumer.write(MEDIA_VOLUME_MUTE);
   }
-  
-  delay(5);
 }
