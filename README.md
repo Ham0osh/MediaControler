@@ -6,3 +6,9 @@ Building a diy media controler using rotary encoder and keyboard switches. Some 
  - Mute
  - Next/Previous Track
  - Lighting
+
+
+Libraries used:
+ - HID-Project
+ - SimpleRotary
+ - NeoPixel
