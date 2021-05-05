@@ -172,6 +172,19 @@ void loop() {
     colIsDefault = false;
     muted = false;
   }
+
+  //Short push
+  if ( t == 1 ) {
+    // Pause
+    Serial.println("Short Push");
+    Consumer.write(MEDIA_PLAY_PAUSE);
+    //for(int i=0; i<NUMPIXELS; i++) {
+    //  pixels.setPixelColor(i, GRN);
+    //}
+    //colChanged = true;
+    //colIsDefault = false;
+    //timeLast = millis() + 1000;
+  }
   
   //Long push
   if ( t == 2 ) {
@@ -188,19 +201,6 @@ void loop() {
       colIsDefault = true;
     }
      colChanged = true;
-  }
-
-  //Short push
-  if ( t == 1 ) {
-    // Pause
-    Serial.println("Short Push");
-    Consumer.write(MEDIA_PLAY_PAUSE);
-    for(int i=0; i<NUMPIXELS; i++) {
-      pixels.setPixelColor(i, GRN);
-    }
-    colChanged = true;
-    colIsDefault = false;
-    timeLast = millis() + 1000;
   }
   
   // Check if its time to switch back to standby
