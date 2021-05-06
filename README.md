@@ -1,4 +1,4 @@
-# MediaControler
+# MediaController
 Building a diy media controler using rotary encoder and keyboard switches. Some goals include:
 
  - Volume up/down
