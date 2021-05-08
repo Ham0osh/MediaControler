@@ -32,6 +32,19 @@ I also threw in a third button to the Micro's reset pin for debugging. There is 
 _May 04 2021_
 
 ---
+## Making the knob
+My next step was to find a satisfying rotary knob of the size I was thinking of (no luck so far) or make my own. So I tried drawing up an idea in AutoCAD that I based on my cardboard prototype. I made the knob have an exterior radius of 26mm, and made sure to include a 6mm diameter hole in the middle. My goal is ultimately to have something made out of metal but for now 3D printing allows for rapid prototyping.
+
+![Figure: First CAD drawing of rotary encoder knob. Gif: Printing of the first knob.](https://user-images.githubusercontent.com/67180838/117548645-e985cc00-afea-11eb-900d-598175e066d6.gif)
+
+The printed knob's domensions were a little bit off so I used a 15/64 in drill to bring the center hole to the correct size and open the exterior hole wide enough to bring a screwdriver through. This worked very well as a temporary version but turning a screw through the plastic is not a permanent fix. Overall I found this model works very well, the white plastic walls allow more light than I was expecting through.
+
+![Figure: Photo of both prototype knobs side by side.](https://user-images.githubusercontent.com/67180838/117549342-bcd3b380-afee-11eb-9077-839fdf0c3da4.jpg)
+
+![Gif: Using the 3D printed knob with all inputs.](https://user-images.githubusercontent.com/67180838/117549351-cbba6600-afee-11eb-8672-ff4a5f9448a4.gif)
+
+
+---
 Hamish Johnson
 
 May 2021
