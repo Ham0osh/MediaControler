@@ -1,3 +1,4 @@
+
 ## Hamish's Media Controller
 
 Working on building a small media controller using a rotary encoder and key switches with plans to add rgb indicators. Currently working with a cardboard prototype running a Pro Micro.
@@ -40,7 +41,10 @@ My next step was to find a satisfying rotary knob of the size I was thinking of 
 
 The printed knob's domensions were a little bit off so I used a 15/64 in drill to bring the center hole to the correct size and open the exterior hole wide enough to bring a screwdriver through. This worked very well as a temporary version but turning a screw through the plastic is not a permanent fix. Overall I found this model works very well, the white plastic walls allow more light than I was expecting through. In the meantime I updated some smother colour transitions, added highlights for skipping through tracks, and a green flash for pause and play.
 
-![Figure: Photo of both prototype knobs side by side followed by gif showing the LED colours under various actions.](https://github.com/Ham0osh/MediaController/blob/69595dd127647da17686752bbb0cdb0f236b2aa4/docs/images/ezgif.com-gif-maker%20(6).gif)
+![Figure: Photo of both prototype knobs side by side followed by gif showing the LED colours under various actions.](https://github.com/Ham0osh/MediaController/blob/7a2b305e789dcb679d8f457b6f3c85b7eb790762/docs/images/ezgif.com-gif-maker%20(6).gif)
+
+![Figure: Photo of both prototype knobs side by side followed by gif showing the LED colours under various actions.](https://user-images.githubusercontent.com/67180838/117549979-65374700-aff2-11eb-803f-662a93a16339.gif)
+
 _May 08 2021_
 
 ---
