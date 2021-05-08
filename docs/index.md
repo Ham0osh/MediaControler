@@ -37,12 +37,10 @@ My next step was to find a satisfying rotary knob of the size I was thinking of 
 
 ![Figure: First CAD drawing of rotary encoder knob. Gif: Printing of the first knob.](https://user-images.githubusercontent.com/67180838/117548645-e985cc00-afea-11eb-900d-598175e066d6.gif)
 
-The printed knob's domensions were a little bit off so I used a 15/64 in drill to bring the center hole to the correct size and open the exterior hole wide enough to bring a screwdriver through. This worked very well as a temporary version but turning a screw through the plastic is not a permanent fix. Overall I found this model works very well, the white plastic walls allow more light than I was expecting through.
+The printed knob's domensions were a little bit off so I used a 15/64 in drill to bring the center hole to the correct size and open the exterior hole wide enough to bring a screwdriver through. This worked very well as a temporary version but turning a screw through the plastic is not a permanent fix. Overall I found this model works very well, the white plastic walls allow more light than I was expecting through. In the meantime I updated some smother colour transitions, added highlights for skipping through tracks, and a green flash for pause and play.
 
-![Figure: Photo of both prototype knobs side by side.](https://user-images.githubusercontent.com/67180838/117549342-bcd3b380-afee-11eb-9077-839fdf0c3da4.jpg)
-
-![Gif: Using the 3D printed knob with all inputs.](https://user-images.githubusercontent.com/67180838/117549351-cbba6600-afee-11eb-8672-ff4a5f9448a4.gif)
-
+![Figure: Photo of both prototype knobs side by side followed by gif showing the LED colours under various actions.](https://github.com/Ham0osh/MediaController/blob/69595dd127647da17686752bbb0cdb0f236b2aa4/docs/images/ezgif.com-gif-maker%20(6).gif)
+_May 08 2021_
 
 ---
 Hamish Johnson
