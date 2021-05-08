@@ -21,8 +21,7 @@ _Apr 30 2021_
 ## Prototype begins
 With the basic concept started, I made a base and knob for my enocder out of cardboard with room for two pushbuttons for previous/next track (the end goal would be to replace these with keyswitches).
 
-![Prototype 2: Rotary encoder and buttons on cardboard body, cardboard knob](https://github.com/Ham0osh/MediaController/blob/master/docs/images/ezgif.com-gif-maker%20(6).gif)
-
+![Prototype 2: Rotary encoder and buttons on cardboard body, cardboard knob](https://user-images.githubusercontent.com/67180838/117551040-7daa6000-aff8-11eb-8b5f-9980cc493895.png)
 
 With the controls set up and working to control volume up/down, mute, pause/play, and next/previous track, I worked on the LED lights. I chose some NeoPixel circles with 12 LED's as they were easily accesible and were the right size. The Adafruit_NeoPixel library let me initialize to a standby colour and react to controls being adjusted. I had originaly hoped to use it to indicate my computers volume, however, this would require setting up code/drivers on my computer to send this information to the micro istelf which I do not currently feel interested in doing.
 
