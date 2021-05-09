@@ -1,3 +1,4 @@
+
 ## Hamish's Media Controller
 
 Working on building a small media controller using a rotary encoder and key switches with plans to add rgb indicators. Currently working with a cardboard prototype running a Pro Micro.
@@ -20,7 +21,7 @@ _Apr 30 2021_
 ## Prototype begins
 With the basic concept started, I made a base and knob for my enocder out of cardboard with room for two pushbuttons for previous/next track (the end goal would be to replace these with keyswitches).
 
-![Prototype 2: Rotary encoder and buttons on cardboard body, cardboard knob](https://user-images.githubusercontent.com/67180838/117092452-1bf5a780-ad13-11eb-8153-e8bd92e295fe.png)
+![Prototype 2: Rotary encoder and buttons on cardboard body, cardboard knob](https://user-images.githubusercontent.com/67180838/117551040-7daa6000-aff8-11eb-8b5f-9980cc493895.png)
 
 With the controls set up and working to control volume up/down, mute, pause/play, and next/previous track, I worked on the LED lights. I chose some NeoPixel circles with 12 LED's as they were easily accesible and were the right size. The Adafruit_NeoPixel library let me initialize to a standby colour and react to controls being adjusted. I had originaly hoped to use it to indicate my computers volume, however, this would require setting up code/drivers on my computer to send this information to the micro istelf which I do not currently feel interested in doing.
 
@@ -30,6 +31,17 @@ With the controls set up and working to control volume up/down, mute, pause/play
 
 I also threw in a third button to the Micro's reset pin for debugging. There is currently a bug where after time has passed, the micro's communication to the computer slows down to only update about 5 times per second. Opening the serial monitor fixes this, and so does reseting the board.
 _May 04 2021_
+
+---
+## Making the knob
+My next step was to find a satisfying rotary knob of the size I was thinking of (no luck so far) or make my own. So I tried drawing up an idea in AutoCAD that I based on my cardboard prototype. I made the knob have an exterior radius of 26mm, and made sure to include a 6mm diameter hole in the middle. My goal is ultimately to have something made out of metal but for now 3D printing allows for rapid prototyping.
+
+![Figure: First CAD drawing of rotary encoder knob. Gif: Printing of the first knob.](https://user-images.githubusercontent.com/67180838/117548645-e985cc00-afea-11eb-900d-598175e066d6.gif)
+
+The printed knob's domensions were a little bit off so I used a 15/64 in drill to bring the center hole to the correct size and open the exterior hole wide enough to bring a screwdriver through. This worked very well as a temporary version but turning a screw through the plastic is not a permanent fix. Overall I found this model works very well, the white plastic walls allow more light than I was expecting through. In the meantime I updated some smother colour transitions, added highlights for skipping through tracks, and a green flash for pause and play.
+
+![Figure: Photo of both prototype knobs side by side followed by gif showing the LED colours under various actions.](https://user-images.githubusercontent.com/67180838/117549979-65374700-aff2-11eb-803f-662a93a16339.gif)
+_May 08 2021_
 
 ---
 Hamish Johnson
