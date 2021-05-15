@@ -24,15 +24,19 @@ Adafruit_NeoPixel pixels(NUMPIXELS, NEO_PIN, NEO_GRB + NEO_KHZ800);
 #define MEDIA_VOLUME_MUTE 0xE2
 #define MEDIA_VOLUME_UP 0xE9
 #define MEDIA_VOLUME_DOWN 0xEA
+#define KEY_SPACE 0x2b
 
 // Input settings
 const int debounceDelay = 10;
 const int errorDelay = 2;
-const int buttonPinL = 8;
-const int buttonPinR = 9;
+const int buttonPinS = 7; // South button pin
+const int buttonPinL = 8; // Left button pin
+const int buttonPinR = 9; // Right button pin
 // Input state variables
+int buttonStateS = 0;
 int buttonStateL = 0;
 int buttonStateR = 0;
+int last_buttonStateS = 0;
 int last_buttonStateL = 0;
 int last_buttonStateR = 0;
 // time variables
@@ -44,6 +48,7 @@ unsigned long timeFade;
 bool colIsDefault;
 bool colChanged;
 bool muted;
+bool zoomSpace;
 
 // Define colours used below
 static const uint32_t BLACK = pixels.Color(1, 1, 1);
@@ -55,6 +60,7 @@ static const uint32_t light_PURP = pixels.Color(158, 72, 235);
 static const uint32_t dark_PURP = pixels.Color(30, 0, 80);
 static const uint32_t RED = pixels.Color(255, 5, 5);
 static const uint32_t GRN = pixels.Color(102, 204, 1);
+static const uint32_t YEL = pixels.Color(170, 170, 1);
 
 void setup() {
   timeTrail = 2000;     // Duration led's will stay changed before going back to standby
@@ -67,6 +73,7 @@ void setup() {
   colIsDefault = true;
   colChanged = false;
   muted = false;
+  zoomSpace = false;
 
   // Startup Animation
   for(int i=0; i<NUMPIXELS; i++) {
@@ -94,6 +101,7 @@ void setup() {
   rotary.setDebounceDelay(debounceDelay);
   rotary.setErrorDelay(errorDelay);
   // Setup Button pins
+  pinMode(buttonPinS,INPUT_PULLUP);
   pinMode(buttonPinL,INPUT_PULLUP);
   pinMode(buttonPinR,INPUT_PULLUP);
   
@@ -107,6 +115,7 @@ void loop() {
   // Check button states
   byte i = rotary.rotate();
   byte t = rotary.pushType(50);
+  buttonStateS = digitalRead(buttonPinS);
   buttonStateL = digitalRead(buttonPinL);
   buttonStateR = digitalRead(buttonPinR);
 
@@ -202,15 +211,32 @@ void loop() {
     }
      colChanged = true;
   }
+
+  //Bottom button
+  if ( buttonStateS == 0 && last_buttonStateS == 1 ) {
+    Serial.println("Down button");
+    Keyboard.write(KEY_SPACE);
+    for(int i=0; i<NUMPIXELS; i++) {
+      pixels.setPixelColor(i, YEL);
+    }
+    timeLast = millis();
+    colIsDefault = false;
+    colChanged = true;
+  } else if ( last_buttonStateS == 0 && buttonStateS == 1){
+    for(int i=0; i<NUMPIXELS; i++) {
+      pixels.setPixelColor(i, PURP);
+    }
+    colIsDefault = true;
+    colChanged = true;
+  }
   
   // Check if its time to switch back to standby
-  if (  not(colIsDefault) && not(muted) && millis()-timeLast >= timeTrail ){
+  if (  not(colIsDefault) && not(muted) && not(zoomSpace) && millis()-timeLast >= timeTrail ){
     for(int i=0; i<NUMPIXELS; i++) {
       pixels.setPixelColor(i, PURP);
       pixels.show();
       delay(timeFade);
     }
-    colChanged = false;
     colIsDefault = true;
   }
   // Make red if muted
@@ -229,6 +255,7 @@ void loop() {
 
   // Send button states and reset if colours need to be updated
   delay(10);
+  last_buttonStateS = buttonStateS;
   last_buttonStateL = buttonStateL;
   last_buttonStateR = buttonStateR;
   colChanged = false;
