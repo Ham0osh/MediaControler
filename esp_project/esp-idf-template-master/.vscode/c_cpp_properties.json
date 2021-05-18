@@ -1,0 +1,14 @@
+{
+    "configurations": [
+      {
+        "name": "Linux",
+        "cStandard": "c11",
+        "cppStandard": "c++17",
+        "includePath": [
+          "/Users/hamis/Documents/Arduino/libraries/**"
+        ],
+        "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+      }
+    ],
+    "version": 4
+  }
