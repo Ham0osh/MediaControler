@@ -48,6 +48,8 @@ _May 08 2021_
 I ordered some Cherry MX brown switches to take the place of my pushbuttons as I want to feel a little 'bump' as I press them. Once soldered they are just as simple as the pushbuttons but much more satisfying. I made a new section of the cardboard prototype to hold the keys at the right height, I plan to replace the bottom-most buttons keycap with a 2u wide one. 
 
 ![Figure: Testing the Cherry MX brown keyswitches and adding them to the prototype.](https://user-images.githubusercontent.com/67180838/121755394-e8edc300-cacb-11eb-9100-3d4921a0483a.png)
+
+I am holding off on developing a more solid prototype while I learn how to program an esp32 using the esp-idf and transfer this code onto that using the build in bluetooth capability instead of a wired connection. I havent decided if I want to add a rechargeable battery or keep it wired.
 _June 11 2021_
 
 ---
