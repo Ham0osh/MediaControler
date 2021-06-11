@@ -23,7 +23,7 @@ With the basic concept started, I made a base and knob for my enocder out of car
 
 ![Prototype 2: Rotary encoder and buttons on cardboard body, cardboard knob](https://user-images.githubusercontent.com/67180838/117551040-7daa6000-aff8-11eb-8b5f-9980cc493895.png)
 
-With the controls set up and working to control volume up/down, mute, pause/play, and next/previous track, I worked on the LED lights. I chose some NeoPixel circles with 12 LED's as they were easily accesible and were the right size. The Adafruit_NeoPixel library let me initialize to a standby colour and react to controls being adjusted. I had originaly hoped to use it to indicate my computers volume, however, this would require setting up code/drivers on my computer to send this information to the micro istelf which I do not currently feel interested in doing.
+With the controls set up and working to control volume up/down, mute, pause/play, and next/previous track, I worked on the LED lights. I chose some NeoPixel rings with 12 LED's as they were easily accesible and were the right size. The Adafruit_NeoPixel library let me initialize to a standby colour and react to controls being adjusted. I had originaly hoped to use it to indicate my computers volume, however, this would require setting up code/drivers on my computer to send this information to the micro istelf which I do not currently feel interested in doing.
 
 ![Figure: Showing Adafruit NeoPixel ring on base with and without knob](https://user-images.githubusercontent.com/67180838/117092735-f4eba580-ad13-11eb-8850-04c1f5bc5d86.png)
 
@@ -44,6 +44,13 @@ The printed knob's domensions were a little bit off so I used a 15/64 in drill t
 _May 08 2021_
 
 ---
+## Adding Keyswitches
+I ordered some Cherry MX brown switches to take the place of my pushbuttons as I want to feel a little 'bump' as I press them. Once soldered they are just as simple as the pushbuttons but much more satisfying. I made a new section of the cardboard prototype to hold the keys at the right height, I plan to replace the bottom-most buttons keycap with a 2u wide one. 
+
+![Figure: Testing the Cherry MX brown keyswitches and adding them to the prototype.](https://user-images.githubusercontent.com/67180838/121755394-e8edc300-cacb-11eb-9100-3d4921a0483a.png)
+_June 11 2021_
+
+---
 Hamish Johnson
 
-May 2021
+June 2021
