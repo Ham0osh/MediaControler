@@ -21,3 +21,12 @@ Arduino libraries used:
 
 > I am currently working to learn and transfer this project to the esp-idf on an esp32 controller
 
+---
+
+| Directory              | Contents                             |
+| ---------------------- | ------------------------------------ |
+| KnobCAD                | Files for making custom rotary knob. |
+| docs                   | Files for githubPages.               |
+| esp_project            | Building project for esp32.          |
+| sketch_MediaController | Arduino sketch for Pro Micro.        |
+
