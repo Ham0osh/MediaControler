@@ -49,7 +49,7 @@ I ordered some Cherry MX brown switches to take the place of my pushbuttons as I
 
 ![Figure: Testing the Cherry MX brown keyswitches and adding them to the prototype.](https://user-images.githubusercontent.com/67180838/121755394-e8edc300-cacb-11eb-9100-3d4921a0483a.png)
 
-I am holding off on developing a more solid prototype while I learn how to program an esp32 using the esp-idf and transfer this code onto that using the build in bluetooth capability instead of a wired connection. I havent decided if I want to add a rechargeable battery or keep it wired.
+I am holding off on developing a more solid prototype while I learn how to program an esp32 using the esp-idf. I will transfer this code onto the new device using the built in bluetooth capability instead of a wired connection. I havent decided if I want to add a rechargeable battery or keep it wired.
 _June 11 2021_
 
 ---
