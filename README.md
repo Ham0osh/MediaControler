@@ -1,14 +1,32 @@
-# MediaController
-Building a diy media controler using rotary encoder and keyboard switches. Some goals include:
+# Media Controller
 
- - Volume up/down
- - Play/Pause
- - Mute
- - Next/Previous Track
- - Lighting
+Building a diy media controller using a rotary encoder and keyboard switches. Some goals include:
 
+- Volume up/down
+- Play/Pause
+- Mute
+- Next/Previous track
+- *RGB lighting?*
+- *Some easy to set up macros?*
 
-Libraries used:
- - HID-Project
- - SimpleRotary
- - NeoPixel
+Arduino libraries used:
+
+- HID-Project
+- SimpleRotary
+- NeoPixel
+
+---
+
+[**Details and updates can be found here**](https://ham0osh.github.io/MediaController/)
+
+> I am currently working to learn and transfer this project to the esp-idf on an esp32 controller
+
+---
+
+| Directory              | Contents                             |
+| ---------------------- | ------------------------------------ |
+| KnobCAD                | Files for making custom rotary knob. |
+| docs                   | Files for githubPages.               |
+| esp_project            | Building project for esp32.          |
+| sketch_MediaController | Arduino sketch for Pro Micro.        |
+
